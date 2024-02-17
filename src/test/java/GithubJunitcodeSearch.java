@@ -32,7 +32,6 @@ public class GithubJunitcodeSearch {
                     "    $(\"#second\").should(visible).click();\n" +
                     "  }\n" +
                     "}"));
-        sleep(2000);
         }
 
 }
