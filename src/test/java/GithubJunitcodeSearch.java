@@ -10,9 +10,8 @@ import static java.lang.System.*;
 public class GithubJunitcodeSearch {
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://github.com/";
-        Configuration.pageLoadStrategy = "eager";
+
     }
     @Test
     void shouldFindJunit5code() {
@@ -33,7 +32,7 @@ public class GithubJunitcodeSearch {
                     "    $(\"#second\").should(visible).click();\n" +
                     "  }\n" +
                     "}"));
-        sleep(3000);
+        sleep(2000);
         }
 
 }
