@@ -17,7 +17,7 @@ public class TakeEnterpriseByHover {
     void takeEnterpriseTest() {
         open("https://github.com");
         $("[aria-label=Global]").$(byText("Solutions")).hover();
-        $$("[aria-labelledby='solutions-for-heading']").first().$("a").click();
+        $$("div div.border-bottom a").findBy(text("Enterprise")).click();
         $("#hero-section-brand-heading").shouldHave(text("The AI-powered developer platform."));
         sleep(2000);
     }
