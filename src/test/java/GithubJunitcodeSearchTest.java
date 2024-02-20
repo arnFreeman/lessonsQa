@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static java.lang.System.out;
 
 public class GithubJunitcodeSearchTest {
     @BeforeAll
@@ -18,6 +19,7 @@ public class GithubJunitcodeSearchTest {
             $("#wiki-tab").click();
             $("[placeholder='Find a page…']").setValue("SoftAssertions").pressEnter();
             $$("#wiki-pages-box").findBy(text("SoftAssertions")).click();
+            out.println("SoftAssertions найден");
 
             $(".markdown-body").$(byText("""
                     Using JUnit5 extend test class:
